@@ -12,6 +12,7 @@
     * divide & conquer : 분할 정복
     * dynamic programming : 동적 계획법
     * greedy method : 탐욕법
+    * combinatorial search : 조합 분석
 
 <br>
 
