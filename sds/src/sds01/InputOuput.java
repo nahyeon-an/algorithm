@@ -1,3 +1,5 @@
+package sds01;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -5,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Test1 {
+public class InputOuput {
 	private static boolean[] visited = new boolean[10000];
 	private static int[] maxes = new int[10000];
 
@@ -23,13 +25,5 @@ public class Test1 {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	}
-
-	public void dfs(int cur) {
-		visited[cur] = true;
-	}
-	
-	public static void backtracking() {
-		return;
 	}
 }

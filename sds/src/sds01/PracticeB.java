@@ -1,3 +1,5 @@
+package sds01;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -7,7 +9,7 @@ import java.util.Queue;
 /*
  * 3055 : ≈ª√‚
  */
-public class PracticB {
+public class PracticeB {
 	private static char[][] map;
 	private static boolean[][] visited;
 	private static int[] dx = {1,-1,0,0};
