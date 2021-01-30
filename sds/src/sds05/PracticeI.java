@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 /*
- * 1722 : ¼ø¿­ÀÇ ¼ø¼­
+ * 1722 : ìˆœì—´ì˜ ìˆœì„œ
  */
 public class PracticeI {
 	private static final int MAX_N = 20;
@@ -44,7 +44,7 @@ public class PracticeI {
 		}
 	}
 	
-	// k¹øÂ° ¼ø¿­ Ã£±â (k -> ¼ýÀÚ¿­)
+	// kï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ Ã£ï¿½ï¿½ (k -> ï¿½ï¿½ï¿½Ú¿ï¿½)
 	public static void findKth(long k, boolean[] visited, int n) {
 		if (n == 0) return;
 		int first = (int) ((k-1) / f[n-1]) + 1; 
@@ -60,7 +60,7 @@ public class PracticeI {
 		findKth((k-1) % f[n-1] + 1, visited, n-1);
 	}
 
-	// ¸î ¹øÂ° ¼ø¿­ÀÎÁö Ã£±â (¼ýÀÚ¿­ -> k)
+	// ï¿½ï¿½ ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã£ï¿½ï¿½ (ï¿½ï¿½ï¿½Ú¿ï¿½ -> k)
 	public static long findK(int[] nums, boolean[] visited) {
 		long ret = 0;
 		for (int i = 0; i < nums.length; i++) {

@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.util.HashSet;
 
 /*
- * 5568 : Ä«µå ³õ±â
+ * 5568 : ì¹´ë“œë†“ê¸°
  */
 public class PracticeE {
 	private static String[] nums;

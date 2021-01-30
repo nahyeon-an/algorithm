@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /*
- * 13251 : ¡∂æ‡µπ ≤®≥ª±‚
+ * 13251 : Ï°∞ÏïΩÎèå Í∫ºÎÇ¥Í∏∞
  */
 public class PracticeJ {
 	private static int[] colors;

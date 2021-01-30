@@ -5,6 +5,9 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.LinkedHashSet;
 
+/*
+ * N과 M (9)
+ */
 public class PracticeK {
 	private static int[] nums;
 	private static LinkedHashSet<String> set;

@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /*
- * 11051 : ÀÌÇ×°è¼ö 2
+ * 11051 : ì´í•­ ê³„ìˆ˜2
  */
 public class PracticeB {
 	private static final int N = 1000;

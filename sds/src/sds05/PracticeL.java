@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.LinkedHashSet;
 
 /*
- * 15664 : N°ú M (10)
+ * 15664 : Nê³¼ M (10)
  */
 public class PracticeL {
 	private static int[] nums;
