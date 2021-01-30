@@ -5,12 +5,16 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.LinkedHashSet;
 
-public class PracticeK {
+/*
+ * 15664 : N°ú M (10)
+ */
+public class PracticeL {
 	private static int[] nums;
 	private static LinkedHashSet<String> set;
-
+	
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
 		String[] s = br.readLine().split(" ");
 		int n = Integer.parseInt(s[0]);
 		int m = Integer.parseInt(s[1]);
@@ -33,9 +37,20 @@ public class PracticeK {
 		for(String str: set) {
 			System.out.println(str);
 		}
+		
+		br.close();
 	}
 	
 	public static void function(int m, boolean[] visited, String s) {
+		String[] str = s.split(" ");
+		if(str.length >= 2) {
+			int bigger = Integer.parseInt(str[str.length-1]);
+			int small = Integer.parseInt(str[str.length-2]);
+			if (bigger < small) {
+				return;
+			}
+		}
+		
 		if (m == 0) {
 			set.add(s);
 			return;
@@ -52,5 +67,5 @@ public class PracticeK {
 			}
 		}
 	}
-	
+
 }
