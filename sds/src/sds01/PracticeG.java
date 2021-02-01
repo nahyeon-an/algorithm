@@ -7,9 +7,8 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 /*
- * 1920: ¼ö Ã£±â
- * Ã³À½ ½Ãµµ¿¡ binary search°¡ ¾Æ´Ñ A¿¡¼­ ÇÏ³ª¾¿ ºñ±³ÇÏ¿© Å« ¿ø¼Ò°¡ ³ª¿À¸é Á¾·á½ÃÅ°´Â ¹æ¹ıÀ¸·Î ±¸Çö
- * ½Ã°£ ÃÊ°ú ³ª¿È
+ * 1920 : ìˆ˜ ì°¾ê¸° 
+ * ì²˜ìŒ ì‹œë„ì— binary searchê°€ ì•„ë‹Œ í•˜ë‚˜ì”© ë¹„êµí•˜ë©´ ì‹œê°„ ì´ˆê³¼ë¨
  */
 
 public class PracticeG {

@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /*
- * 1735 : ºÐ¼ö ÇÕ
+ * 1735 : ë¶„ìˆ˜ í•©
  */
 public class PracticeA {
 
@@ -18,8 +18,8 @@ public class PracticeA {
 		int A2 = Integer.parseInt(s[0]);
 		int B2 = Integer.parseInt(s[1]);
 		
-		int child = A1 * B2 + A2 * B1; // ºÐÀÚ
-		int parent = B1 * B2; // ºÐ¸ð
+		int child = A1 * B2 + A2 * B1;
+		int parent = B1 * B2;
 		
 		int g = gcd(parent, child);
 		System.out.println((child/g)+" "+(parent/g));

@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /*
- * 1991 : Æ®¸® ¼øÈ¸
+ * 1991 : íŠ¸ë¦¬ ìˆœíšŒ
  */
 public class PracticeC {
 	private static int N;
@@ -46,7 +46,7 @@ class Node {
 class Tree {
 	Node root;
 	
-	// Æ®¸®ÀÇ ·çÆ® ÃÊ±âÈ­
+	// Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ® ï¿½Ê±ï¿½È­
 	public Tree(char data, char left, char right) {
 		root = new Node(data);
 		

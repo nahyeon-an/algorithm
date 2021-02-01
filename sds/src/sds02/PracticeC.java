@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /*
- * 2748 : ÇÇº¸³ªÄ¡ ¼ö 2
+ * 2748 : í”¼ë³´ë‚˜ì¹˜ ìˆ˜ 2
  */
 public class PracticeC {
 	private static long N;

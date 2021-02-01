@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 
 /*
- * 2096 : ³»·Á°¡±â
+ * 2096 : ë‚´ë ¤ê°€ê¸° 
  */
 public class PracticeF {
 	private static int N;

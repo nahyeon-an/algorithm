@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /*
- * 2003 : ¼öµéÀÇ ÇÕ 2 (Åõ Æ÷ÀÎÅÍ)
+ * 2003 : ìˆ˜ë“¤ì˜ í•© 2 (íˆ¬ í¬ì¸í„°)
  */
 public class PracticeB {
 	private static int N;
@@ -27,7 +27,7 @@ public class PracticeB {
 			
 			br.close();
 			
-			// ¿¬¼Ó ±¸°£ÇÕÀÇ °ªÀÌ MÀÌ µÇ´Â °æ¿ìÀÇ ¼ö¸¦ Ãâ·Â
+			// ì—°ì† êµ¬ê°„í•©ì˜ ê°’ì´ Mì´ ë˜ëŠ” ê²½ìš°ì˜ ìˆ˜ë¥¼ ì¶œë ¥
 			function();
 			
 			System.out.println(cnt);

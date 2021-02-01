@@ -1,10 +1,9 @@
-package sds03;
+package sds06;
 
 /*
- * 생태학
- * 
+ * 두번째로 작은 최소 스패닝 트리
  */
-public class PracticeH {
+public class PracticeI {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

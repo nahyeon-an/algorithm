@@ -1,7 +1,7 @@
 package sds02;
 
 /*
- * 2143 : µÎ ¹è¿­ÀÇ ÇÕ
+ * 2143 : ë‘ ë°°ì—´ì˜ í•©
  */
 public class PracticeG {
 	private static long T;

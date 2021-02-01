@@ -8,21 +8,20 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 /*
- * 1713 : ÈÄº¸ ÃßÃµÇÏ±â
- * ¹éÁØ¿¡¼­ ÆÛºí¸¯ Å¬·¡½ºÀÌ¸§ÀÌ Main ÀÌ¾î¾ß ÇÔ
+ * 1713 : í›„ë³´ ì¶”ì²œí•˜ê¸°
+ * ë°±ì¤€ì—ì„œ í¼ë¸”ë¦­ í´ë˜ìŠ¤ì˜ ì´ë¦„ì´ Main ì´ì–´ì•¼ í•¨
  */
 public class PracticeD {
 	private static Queue<Integer> queue;
 	private static int[] students;
 
 	public static void main(String[] args) {
-		// ÀÔ·Â
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		students = new int[101];
 		
 		try {
-			int N = Integer.parseInt(br.readLine()); // »çÁøÆ² °³¼ö
-			int vote = Integer.parseInt(br.readLine()); // ÃßÃµ È½¼ö
+			int N = Integer.parseInt(br.readLine()); // ì‚¬ì§„í‹€ ê°œìˆ˜
+			int vote = Integer.parseInt(br.readLine()); // ì¶”ì²œ íšŸìˆ˜
 			queue = new LinkedList<>();
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			for (int i = 0; i < vote; i++) {
@@ -33,7 +32,7 @@ public class PracticeD {
 						queue.add(std);
 					}
 					else if ( queue.size() >= N ) {
-						// »èÁ¦ÇÒ ÇĞ»ıÀ» Ã£±â
+						// ì‚­ì œí•  í•™ìƒì„ ì°¾ê¸°
 						int target = removeStudent();
 						students[target] = 0;
 						queue.remove(target);
@@ -58,14 +57,8 @@ public class PracticeD {
 			
 			br.close();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		// ÃßÃµ ¹ŞÀº ÇĞ»ıÀº ¹İµå½Ã »çÁøÆ²¿¡ °Ô½Ã
-		// »çÁøÆ²ÀÌ ²Ë Â÷ÀÖ´Ù -> (1) ÃßÃµ °¡Àå ÀûÀº ÇĞ»ı »çÁø »èÁ¦ (2) °¡Àå ¿À·¡µÈ »çÁø / »õ·Î¿î ÇĞ»ı °Ô½Ã
-		// »çÁøÆ²¿¡ ÀÖ´Â ÇĞ»ı -> ÃßÃµ È½¼ö Áõ°¡
-		// »çÁøÆ²¿¡¼­ »èÁ¦ -> ÃßÃµ È½¼ö = 0
 	}
 	
 	public static int removeStudent() {

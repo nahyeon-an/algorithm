@@ -6,8 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /*
- * 6416 : ∆Æ∏Æ¿Œ∞°?
- * ¥ŸΩ√ «œ±‚ (∆≤∏≤)
+ * 6416 : Ìä∏Î¶¨Ïù∏Í∞Ä?
  */
 public class PracticeF {
 	private static int tc;

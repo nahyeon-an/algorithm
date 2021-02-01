@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 
 /*
- * 2805 : ³ª¹« ÀÚ¸£±â
+ * 2805 : ë‚˜ë¬´ ìžë¥´ê¸°
  */
 public class PracticeA {
 	private static long N, M;
@@ -41,7 +41,7 @@ public class PracticeA {
 	}
 
 	public static long cutTrees(long height) {
-		// height ¿¡¼­ ³ª¹«µéÀ» Àß¶úÀ» ¶§ °¡Á®°¡´Â ±æÀÌÀÇ ÇÕ ¹ÝÈ¯
+		// height ì—ì„œ ë‚˜ë¬´ë“¤ì„ ìž˜ëžì„ ë•Œ ê°€ì ¸ê°€ëŠ” ê¸¸ì´ì˜ í•©ì„ ë°˜í™˜
 		long ret = 0;
 		for (long i = N-1; i >= 0; i--) {
 			if ( trees[(int) i] > height ) {

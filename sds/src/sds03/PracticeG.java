@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 /*
- * 5639 : ÀÌÁø °Ë»ö Æ®¸®
+ * 5639 : ì´ì§„ ê²€ìƒ‰ íŠ¸ë¦¬
  */
 public class PracticeG {
 	private static ArrayList<Integer> nums;

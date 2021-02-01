@@ -7,16 +7,16 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /*
- * 3055 : Å»Ãâ
+ * 3055 : í‹¸ì¸¨
  */
 public class PracticeB {
 	private static char[][] map;
 	private static boolean[][] visited;
 	private static int[] dx = {1,-1,0,0};
 	private static int[] dy = {0,0,1,-1};
-	private static Queue<Pair> q1; // ¹°
-	private static Queue<Pair> q2; // °í½¿µµÄ¡
-	private static int ans = 0; // ½Ã°£
+	private static Queue<Pair> q1; // ë¬¼
+	private static Queue<Pair> q2; // ê³ ìŠ´ë„ì¹˜
+	private static int ans = 0; // ì‹œê°„
 	
 	
 
@@ -35,21 +35,14 @@ public class PracticeB {
 				String[] row = br.readLine().split("");
 				for (int j = 0; j < C; j++) {
 					map[i][j] = row[j].charAt(0);
-					if (map[i][j] == 'S') { // °í½¿µµÄ¡ À§Ä¡
+					if (map[i][j] == 'S') { // ê³ ìŠ´ë„ì¹˜ ìœ„ì¹˜
 						q2.add(new Pair(i, j));
 					}
-					else if (map[i][j] == '*') { // ¹°ÀÌ Â÷ ÀÖ´Â °÷
+					else if (map[i][j] == '*') { // ë¬¼ì´ ì°¨ ìˆëŠ” ê³³
 						q1.add(new Pair(i, j));
 					}
 				}
 			}
-			
-			// ¹°°ú °í½¿µµÄ¡´Â µ¹À» Åë°úÇÒ ¼ö ¾ø´Ù.
-			// °í½¿µµÄ¡´Â ¹°·Î Â÷ÀÖ´Â ±¸¿ªÀ¸·Î ÀÌµ¿ÇÒ ¼ö ¾ø°í
-			// ¹°µµ ºñ¹öÀÇ ¼Ò±¼·Î ÀÌµ¿ÇÒ ¼ö ¾ø´Ù.
-			
-			// °í½¿µµÄ¡´Â ¸Å ºĞ ¸¶´Ù »óÇÏÁÂ¿ì·Î ¿òÁ÷ÀÓ
-			// ¹°µµ ¸Å ºĞ ¸¶´Ù »óÇÏÁÂ¿ì·Î È®Àå
 						
 			br.close();
 			
@@ -71,16 +64,16 @@ public class PracticeB {
 		for (int i = 0; i < 4; i++) {
 			int nx = wx + dx[i];
 			int ny = wy + dy[i];
-			// map À» ¹ş¾î³ªÁö ¾ÊÀ¸¸é
+			// mapì„ ë²—ì–´ë‚˜ì§€ ì•Šìœ¼ë©´
 			if ((nx > -1) && (nx < map[0].length)
 					&& (ny > -1) && (ny < map.length)) {
-				// map ¿¡¼­ ÀÌµ¿°¡´ÉÇÑ ÀÚ¸®ÀÎÁö (.)ÀÎÁö
+				// mapì—ì„œ ì´ë™ê°€ëŠ¥í•œ ìë¦¬ì¸ì§€ (.)
 				if (map[ny][nx] == '.') {
 					map[ny][nx] = '*';
 				}
 				else if (map[ny][nx] == 'S') {
 					System.out.println("KAKTUS");
-					return; // ÇÁ·Î±×·¥ Á¾·á
+					return; // í”„ë¡œê·¸ë¨ ì¢…ë£Œ
 				}
 			}
 		}
@@ -95,16 +88,16 @@ public class PracticeB {
 			
 			if ((mx > -1) && (mx < map[0].length)
 					&& (my > -1) && (my < map.length)) {
-				// ÀÌµ¿°¡´É
+				// ì´ë™ê°€ëŠ¥
 				if (map[my][mx] == '.') {
 					map[ay][ax] = '.';
 					map[my][mx] = 'S';
-					bfs(); // ´Ù½Ã È£Ãâ? ÇØ¾ßÇÏ´Âµ¥..
+					bfs();
 					map[ay][ax] = 'S';
 					map[my][mx] = '.';
 				}
 				else if (map[my][mx] == 'D') {
-					return; // Á¾·á
+					return; // ì¢…ë£Œ
 				}
 			}
 		}
