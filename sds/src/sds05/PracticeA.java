@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /*
- * 11050 : ÀÌÇ×°è¼ö 1
+ * 11050 : ï¿½ï¿½ï¿½×°ï¿½ï¿½ 1
  */
 public class PracticeA {
 
@@ -23,7 +23,7 @@ public class PracticeA {
 //				int i = n;
 //				int j = k;
 //				ans = 1.0;
-//				// 7 5¸¦ Æ²¸²
+//				// 7 5ï¿½ï¿½ Æ²ï¿½ï¿½
 //				while ((i>0)&&(j>0)) {
 //					ans *= i;
 //					ans /= j;
@@ -34,16 +34,16 @@ public class PracticeA {
 //			}
 //		}
 		
-//		System.out.println(function(n,k));
+		System.out.println(function(n,k));
 //		
-		while ((n>0)&&(k>0)) {
-			ans *= n;
-			ans /= k;
-			System.out.println(ans);
-			n--;
-			k--;
-		}
-		System.out.println((int)ans);
+//		while ((n>0)&&(k>0)) {
+//			ans *= n;
+//			ans /= k;
+//			System.out.println(ans);
+//			n--;
+//			k--;
+//		}
+//		System.out.println((int)ans);
 		br.close();
 	}
 
