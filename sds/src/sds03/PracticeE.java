@@ -5,10 +5,7 @@ import java.io.InputStreamReader;
 import java.util.Stack;
 
 /*
- * 2504 : °ıÈ£ÀÇ °ª
- * () 2Á¡
- * [] 3Á¡
- * j, k : ÃÖ¼ÒÈü, ÃÖ´ëÈü -> °³ÀÎÀûÀ¸·Î ÇØº¸±â
+ * 2504 : ê´„í˜¸ì˜ ê°’
  */
 public class PracticeE {
 	private static Stack<String> st;
@@ -32,12 +29,11 @@ public class PracticeE {
 			if (s.charAt(i)==')') {
 				String top = st.pop();
 				if (top.equals("(")) {
-					// ¿Ã¹Ù¸¥ °ıÈ£
 					st.push("2");
 				}
 				else if (top.equals("[")) {
 					System.out.println(0);
-					return; // ¿Ã¹Ù¸£Áö ¾ÊÀº °æ¿ì
+					return;
 				}
 				else {
 					int score = Integer.parseInt(top);
@@ -53,12 +49,11 @@ public class PracticeE {
 			if (s.charAt(i)==']') {
 				String top = st.pop();
 				if (top.equals("[")) {
-					// ¿Ã¹Ù¸¥ °ıÈ£
 					st.push("3");
 				}
 				else if (top.equals("(")) {
 					System.out.println(0);
-					return; // ¿Ã¹Ù¸£Áö ¾ÊÀº °æ¿ì
+					return;
 				}
 				else {
 					int score = Integer.parseInt(top);

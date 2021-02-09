@@ -12,8 +12,7 @@ public class InputOuput {
 	private static int[] maxes = new int[10000];
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		// ÀÔÃâ·Â ½Ã °¡Àå ºü¸¥ ¹æ¹ý (°­»ç´Ô ÃßÃµ)
+		// ìž…ì¶œë ¥ ì‹œ ê°€ìž¥ ë¹ ë¥¸ ë°©ë²• (ê°•ì‚¬ë‹˜ ì¶”ì²œ)
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringBuilder sb = new StringBuilder();
@@ -22,7 +21,6 @@ public class InputOuput {
 		try {
 			bw.flush();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

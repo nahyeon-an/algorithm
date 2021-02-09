@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Stack;
 
 /*
- * 10828 : ½ºÅÃ
+ * 10828 : ìŠ¤íƒ
  */
 public class PracticeA {
 	private static int N;

@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /*
- * 10845 : ť
+ * 10845 : 큐
  */
 public class PracticeB {
 	private static int N;

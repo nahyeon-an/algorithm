@@ -5,21 +5,19 @@ import java.io.InputStreamReader;
 import java.math.BigInteger;
 
 /*
- * 1837 : ¾ÏÈ£Á¦ÀÛ
- * big integer ±¸ÇöÀÌ ÇÙ½É
+ * 1837 : ì•”í˜¸ì œì‘
+ * big integer êµ¬í˜„ì´ í•µì‹¬
  */
 public class PracticeH {
 
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		// ¼Ò¼ö p, q ÀÇ °ö = pq
 		String[] s = br.readLine().split(" ");
 //		long pq = Integer.parseInt(s[0]);
 //		String p = s[0];
 		BigInteger big = new BigInteger(s[0]);
 //		int len = 0;
 		int k = Integer.parseInt(s[1]);
-		// p,q Áß ÇÏ³ª¶óµµ kº¸´Ù ÀÛÀ¸¸é ¾È ÁÁÀº ¾ÏÈ£
 		int[] num = new int[k+1];
 //		int[] bigint = new int[12];
 		
@@ -38,7 +36,6 @@ public class PracticeH {
 //			bigint[idx] = (p.charAt(len-i-1)-'0') * mul[i % 9];
 //		}
 //		
-		// ¿¡¶óÅä½ºÅ×³×½ºÀÇ Ã¼
 		for (int i = 2; i < num.length; i++) {
 			if (num[i] != -1) {
 				num[i] = i;

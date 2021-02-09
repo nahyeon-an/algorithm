@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /*
- * 1806 : ºÎºÐÇÕ
+ * 1806 : ë¶€ë¶„í•©
  */
 public class PracticeE {
 	private static final int INF = 100000001;

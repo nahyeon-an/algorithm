@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /*
- * 11050 : ���װ�� 1
+ * 11050 : 이항계수1
  */
 public class PracticeA {
 

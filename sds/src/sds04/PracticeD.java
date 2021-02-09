@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /*
- * 2960 : ¿¡¶óÅä½ºÅ×³×½ºÀÇ Ã¼
+ * 2960 : ì—ë¼í† ìŠ¤í…Œë„¤ìŠ¤ì˜ ì²´
  */
 public class PracticeD {
 
@@ -24,7 +24,7 @@ public class PracticeD {
 		
 		for (int i = 2; i < n+1; i++) {
 			if (nums[i] != -1) {
-				// ¾ÆÁ÷ ¾È Áö¿öÁü
+				// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				int p = nums[i];
 				for (int j = 1; p*j < n+1 ; j++) {
 					if (nums[p * j] != -1) {
@@ -38,7 +38,6 @@ public class PracticeD {
 				}
 			}
 		}
-		// k¹øÂ° Áö¿ì´Â ¼ö¸¦ Ãâ·Â
 	}
 
 }

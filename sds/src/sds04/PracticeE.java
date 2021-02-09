@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /*
- * 6588 : °ñµå¹ÙÈåÀÇ ÃßÃø
+ * 6588 : ê³¨ë“œë°”íì˜ ì¶”ì¸¡
  */
 public class PracticeE {
 
@@ -13,7 +13,6 @@ public class PracticeE {
 		String s = "";
 		int[] num = new int[10000001];
 		
-		// ¿¡¶óÅä½ºÅ×³×½ºÀÇ Ã¼
 		for (int i = 2; i < num.length; i++) {
 			if (num[i] != -1) {
 				num[i] = i;
