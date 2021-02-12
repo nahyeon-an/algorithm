@@ -25,3 +25,9 @@ where (
     and
     (lower(city) like '%a' or lower(city) like '%e' or lower(city) like '%i' or lower(city) like '%o' or lower(city) like '%u')
 );
+
+
+-- 모음으로 시작하지 않는 도시 이름 출력 : not 키워드 사용법
+select distinct city
+from STATION
+where not (city like 'a%' or city like 'e%' or city like 'i%' or city like 'o%' or city like 'u%');
