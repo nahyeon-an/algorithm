@@ -31,3 +31,12 @@ where (
 select distinct city
 from STATION
 where not (city like 'a%' or city like 'e%' or city like 'i%' or city like 'o%' or city like 'u%');
+
+
+-- order by 기준1, 기준2
+-- right(문자열, 개수) : 문자열의 오른쪽에서 개수만큼을 가져옴
+-- 비슷한 함수 : left(), mid(문자, 시작위치, 개수)
+select name
+from STUDENTS
+where marks > 75
+order by right(name, 3) asc, id asc;
