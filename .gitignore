@@ -1,5 +1,11 @@
+.ipynb_checkpoints/
+.idea/
+
 chapter10.ipynb
 chapter2.ipynb
 chapter4.ipynb
 ict.ipynb
 kakao_reco.ipynb
+
+py-baekjoon/.idea/
+py-baekjoon/venv/
