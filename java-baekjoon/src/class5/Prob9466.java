@@ -9,7 +9,8 @@ import java.io.*;
  */
 public class Prob9466 {
 	static int[] students;
-	static boolean[] ret;
+	static boolean[] ret, visit;
+	static int cnt;
 
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -19,18 +20,20 @@ public class Prob9466 {
 			int n = Integer.parseInt(br.readLine()); // 10^5
 			students = new int[n+1];
 			StringTokenizer st = new StringTokenizer(br.readLine());
-			for (int j = 1; j<=n; j++) {
-				students[j] = Integer.parseInt(st.nextToken());
-			}
 			
 			ret = new boolean[n+1];
 			for (int j = 1; j<=n; j++) {
-				ArrayList<Integer> path = new ArrayList<>();
-				boolean[] visit = new boolean[n+1];
-//				dfs(j, path, visit);
+				students[j] = Integer.parseInt(st.nextToken());
+				if (j==students[j]) {
+					ret[j] = true; // 자기자신
+				}
 			}
 			
-			// O(n)으로 다시 작성해보자
+			cnt = 0;
+			for (int j = 1; j<=n; j++) {		
+				visit = new boolean[n+1];
+				dfs(j);
+			}
 			
 			int ans = 0;
 			for (int j = 1; j<=n; j++) {
@@ -46,19 +49,22 @@ public class Prob9466 {
 		bw.close();
 	}
 	
-	public static void dfs(int here, ArrayList<Integer> path, boolean[] visit) {
-		if (ret[here]) return;
-		if (visit[here]) {
-			if (path.get(0) == here) {
-				for (int p: path) {
-					ret[p] = true;
-				}
-			}
-			return;
-		}
+	static void dfs(int here) {
+		if (visit[here]) return;
 		visit[here] = true;
-		path.add(here);
-		dfs(students[here], path, visit);
+		
+		int next = students[here];
+		if (!visit[next])
+			dfs(next);
+		else {
+			if (ret[next]) {
+				cnt++;
+				return;
+			}
+			
+		}
+		
+		ret[here] = true;
 	}
 
 }
