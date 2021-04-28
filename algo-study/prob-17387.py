@@ -29,11 +29,25 @@ def ccw(a, b, c):
     else:
         return -1  # 시계 방향
 
+if ccw(p1, p2, p3) == 0:
+    if min(p1[0], p2[0]) <= p3[0] <= max(p1[0], p2[0]) and min(p1[1], p2[1]) <= p3[1] <= max(p1[1], p2[1]):
+        print(1)
+        sys.exit(0)
+if ccw(p1, p2, p4) == 0:
+    if min(p1[0], p2[0]) <= p4[0] <= max(p1[0], p2[0]) and min(p1[1], p2[1]) <= p4[1] <= max(p1[1], p2[1]):
+        print(1)
+        sys.exit(0)
+if ccw(p3, p4, p1) == 0:
+    if min(p3[0], p4[0]) <= p1[0] <= max(p3[0], p4[0]) and min(p3[1], p4[1]) <= p1[1] <= max(p3[1], p4[1]):
+        print(1)
+        sys.exit(0)
+if ccw(p3, p4, p2) == 0:
+    if min(p3[0], p4[0]) <= p2[0] <= max(p3[0], p4[0]) and min(p3[1], p4[1]) <= p2[1] <= max(p3[1], p4[1]):
+        print(1)
+        sys.exit(0)
+
 if ccw(p1, p2, p3) * ccw(p1, p2, p4) < 0 and \
     ccw(p3, p4, p1) * ccw(p3, p4, p2) < 0:
     print(1)
-elif ccw(p1, p2, p3) * ccw(p1, p2, p4) == 0 and \
-    ccw(p3, p4, p1) * ccw(p3, p4, p2) == 0:
-    print("check")
 else:
     print(0)
