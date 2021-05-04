@@ -1,5 +1,6 @@
 .ipynb_checkpoints/
 .idea/
+.DS_Store
 
 chapter10.ipynb
 chapter2.ipynb

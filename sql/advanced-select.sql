@@ -9,17 +9,23 @@ select
 from TRIANGLES;
 
 
--- where 구문으로 직업 하나마다 결과값 나오도록 수정
-select concat(name, "(", (
-    select
-    case
-      when occupation="Doctor" then "D"
-      when occupation="Actor" then "A"
-      when occupation="Singer" then "S"
-      when occupation="Professor" then "P"
-    end
-    from OCCUPATIONS
-    where name = name
-), ")")
-from OCCUPATIONS;
-select
+-- name 순으로 정렬, 직업을 ()안에 대문자 첫글자로 넣기
+-- 문자열 함수 : concat(), lower(), left()
+select concat(name, '(', left(occupation, 1), ')')
+from occupations
+order by name;
+select concat('There are a total of ', count(occupation), ' ', lower(occupation), 's.')
+from occupations
+group by occupation
+order by count(occupation), lower(occupation);
+
+
+-- 문제 : Occupations (더 공부/생각해야 함, 사용자 정의 변수)
+-- 사용자 정의 변수
+set @d := 0, @p := 0, @s := 0, @a := 0;
+select (
+  select name
+  from occupations
+  where occupation = 'Doctor'
+), professor name, singer name, actor Name
+from occupations;
