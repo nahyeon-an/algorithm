@@ -15,52 +15,80 @@ def to_second(time):
 
 def to_time(s):
     hour = s // 3600
-    if hour < 10:
-        hour = "0" + str(hour)
-    else:
-        hour = str(hour)
+    hour = "{0:02d}".format(hour)
     s %= 3600
 
     minute = s // 60
-    if minute < 10:
-        minute = "0" + str(minute)
-    else:
-        minute = str(minute)
+    minute = "{0:02d}".format(minute)
 
     sec = s % 60
-    if sec < 10:
-        sec = "0" + str(sec)
-    else:
-        sec = str(sec)
+    sec = "{0:02d}".format(sec)
 
     return hour + ":" + minute + ":" + sec
 
 
 def solution(play_time, adv_time, logs):
+    # 시간 초과
+    play = to_second(play_time)
     time = [0 for _ in range(to_second('99:59:59')+1)]
 
     if play_time == adv_time:
         return '00:00:00'
 
     for log in logs:
-        st = to_second(log[:8])
-        end = to_second(log[9:])
-        for i in range(st, end + 1):
+        st, end = log.split("-")
+        st = to_second(st)
+        end = to_second(end)
+        for i in range(st, end):
             time[i] += 1
 
-    m = 0
     ad = to_second(adv_time)
-    play = to_second(play_time)
+
     tot = 0
     idx = 0
+
+    from collections import deque
+    dq = deque()
+
     for i in range(ad):
         tot += time[i]
-    for i in range(1, play - ad):
-        tot -= time[i - 1]
-        tot += time[i + ad]
-        if tot > m:
-            m = tot
-            idx = i
+        dq.append(time[i])
+
+    maxTot = tot
+
+    for i in range(ad, play):
+        tot -= dq.popleft()
+        tot += time[i]
+        dq.append(time[i])
+
+        if maxTot < tot:
+            maxTot = tot
+            idx = i - ad + 1
+
+    return to_time(idx)
+
+def solve(play_time, adv_time, logs):
+    time = [0 for _ in range(to_second('99:59:59')+1)]
+
+    for log in logs:
+        st, end = log.split("-")
+        time[to_second(st)] += 1  # 시작점은 +1 표시
+        time[to_second((end))] -= 1  # 끝점은 -1 표시
+
+    for i in range(1, to_second(play_time)):
+        time[i] = time[i] + time[i-1]
+    for i in range(1, to_second(play_time)):
+        time[i] = time[i] + time[i - 1]
+
+    maxTot = -1
+    idx = 0
+    ad = to_second(adv_time)
+    play = to_second(play_time)
+    for i in range(ad-1, play):
+        tot = time[i] - time[i - ad]
+        if tot > maxTot:
+            maxTot = tot
+            idx = i - ad + 1
 
     return to_time(idx)
 

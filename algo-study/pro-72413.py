@@ -1,6 +1,5 @@
 def solution(n, s, a, b, fares):
     inf = 50000000
-    # graph = [[0 for _ in range(n+1)] for _ in range(n+1)]
     dist = [[inf for _ in range(n + 1)] for _ in range(n + 1)]
 
     for i in range(1, n+1):
