@@ -23,6 +23,56 @@ ex3)
 result = 51
 '''
 
+
 def solution(arr):
-    answer = -1
-    return answer
+    arr.sort()
+    mid = (len(arr) - 1) // 2
+
+    for i in range(mid - 1, -1, -1):
+        if arr[i] < arr[mid]:
+            break
+
+    for j in range(mid + 1, len(arr)):
+        if arr[j] > arr[mid]:
+            break
+
+    if len(arr[:i+1]) < len(arr[j:]):
+        th = arr[mid] + 1
+    elif len(arr[:i+1]) == len(arr[j:]):
+        if arr[i] == arr[j]:
+            th = 0
+        else:
+            th = arr[i] + 1
+    else:
+        th = arr[i] + 1
+
+    return th
+
+
+if __name__ == '__main__':
+    ret = solution([0, 0, 255, 255, 0, 0, 255, 255, 255])
+    print(ret)
+
+    ret = solution([1, 52, 125, 10, 25, 201, 244, 192, 128, 23, 203, 98, 154, 255])
+    print(ret)
+
+    ret = solution([100, 50, 100, 200])
+    print(ret)
+
+    ret = solution([1, 2, 3, 4, 5])
+    print(ret)
+
+    ret = solution([1, 1, 1, 2, 3])
+    print(ret)
+
+    ret = solution([1, 2, 3, 3, 3])
+    print(ret)
+
+    ret = solution([0, 1, 2, 2, 3])
+    print(ret)
+
+    ret = solution([100, 100, 100, 200])
+    print(ret)
+
+    ret = solution([100, 100, 100, 100])
+    print(ret)
