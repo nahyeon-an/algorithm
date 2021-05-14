@@ -7,38 +7,42 @@ n = int(sys.stdin.readline())
 s = sys.stdin.readline().strip()
 x, y = map(int, sys.stdin.readline().split())
 
-# 1. s -> tree 모양 찾기..
-# 일단 트리를 어떻게 저장해야할지 모르겠다...
-# 구현이 전혀 안 되네.....ㅋㅋ
-tree = [[0 for _ in range(n)] for _ in range(n)]
 depth = [-1 for _ in range(n)]
-parent = []  # 부모 노드 정보 ?
-
-node = 0
-par = -1
-for i in range(2*n):
-    print(par, node)
-    if s[i] == '0':
-        if par != -1:
-            tree[par][node] = 1
-            tree[node][par] = 1
-        par = node
-        node += 1
-
+par = [-1 for _ in range(n)]  # 부모 노드 정보 ?
+arr = [-1 for _ in range(2*n)]
 
 cnt = 0
 node = 0
+st = [-1]
+# depth
 for i in range(2 * n):
     if s[i] == '0':
+        st.append(node)
+        arr[i] = node
         cnt += 1
-        depth[node] = cnt
         node += 1
     else:
+        cur = st.pop()
+        depth[cur] = cnt
+        par[cur] = st[-1]
+        arr[i] = cur
         cnt -= 1
 
-# 노드 0 ~ n-1 의 레벨
-print(depth)
+def lca(a, b):
+    while depth[a] != depth[b]:
+        if depth[a] > depth[b]:
+            a = par[a]
+        else:
+            b = par[b]
+    while a != b:
+        a = par[a]
+        b = par[b]
+    return a
 
-# 2. x와 y의 최소 공통 조상을 삭제하는 문제 같다
+rm = lca(arr[x-1], arr[y-1])
+answer = ''
+for i in range(2*n):
+    if arr[i] == rm:
+        answer += (str(i+1) + " ")
 
-# 제거해야 할 사과를 나타내는 정수 리턴
+print(answer)
