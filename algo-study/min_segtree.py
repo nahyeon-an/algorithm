@@ -34,6 +34,18 @@ def queryMin(tree, node, start, end, left, right):
     else:
         return min(q1, q2)
 
+def updateMin(tree, node, start, end, idx, val):
+    """
+    arr[idx] 의 값을 val로 업데이트
+    """
+    if idx < start or idx > end:
+        return
+    tree[node] = min(tree[node], val)
+    if start != end:
+        mid = (start + end) // 2
+        updateMin(tree, 2*node, start, mid, idx, val)
+        updateMin(tree, 2*node + 1, mid+1, end, idx, val)
+
 
 if __name__ == '__main__':
     n = 10
@@ -46,3 +58,7 @@ if __name__ == '__main__':
     print(queryMin(min_tree, 1, 0, n - 1, 3, 8))
     print(queryMin(min_tree, 1, 0, n - 1, 2, 4))
     print(queryMin(min_tree, 1, 0, n - 1, 1, 5))
+    print(queryMin(min_tree, 1, 0, n-1, 5, 5))
+    updateMin(min_tree, 1, 0, n-1, 5, 10)
+    arr[5] = 10
+    print(queryMin(min_tree, 1, 0, n-1, 5, 5))
