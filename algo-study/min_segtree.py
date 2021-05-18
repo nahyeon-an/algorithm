@@ -37,14 +37,17 @@ def queryMin(tree, node, start, end, left, right):
 def updateMin(tree, node, start, end, idx, val):
     """
     arr[idx] 의 값을 val로 업데이트
+    이것도 리프에서 다시 올라가야함
     """
     if idx < start or idx > end:
-        return
-    tree[node] = min(tree[node], val)
-    if start != end:
-        mid = (start + end) // 2
-        updateMin(tree, 2*node, start, mid, idx, val)
-        updateMin(tree, 2*node + 1, mid+1, end, idx, val)
+        return tree[node]
+    if start == end:
+        tree[node] = val
+        return tree[node]
+    mid = (start + end) // 2
+    tree[node] = min(updateMin(tree, 2*node, start, mid, idx, val),
+                     updateMin(tree, 2*node + 1, mid+1, end, idx, val))
+    return tree[node]
 
 
 if __name__ == '__main__':
