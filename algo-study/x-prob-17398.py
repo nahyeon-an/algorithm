@@ -5,7 +5,7 @@ python : 8 % 시간 초과
 rank 최적화 하기
 """
 import sys
-sys.setrecursionlimit(10 ** 6)
+sys.setrecursionlimit(10 ** 5)
 # n : 통신탑의 개수 10 ^ 5
 # m : 통신탑 사이의 연결 개수 10 ^ 5
 # q : 분할 횟수
@@ -16,15 +16,22 @@ def union(par, x, y):
     py = find(par, y)
     if px == py:
         return
-    if rank[px] < rank[py]:
-        # y에 합침
-        par[px] = py
-    else:
-        # x에 합침
-        par[py] = px
 
-        if rank[px] == rank[py]:
-            rank[px] += 1
+    # par[px] += par[py]
+    # par[py] = px
+    if px < py:
+        par[py] = px
+    else:
+        par[px] = py
+    # if rank[px] < rank[py]:
+    #     # y에 합침
+    #     par[px] = py
+    # else:
+    #     # x에 합침
+    #     par[py] = px
+    #
+    #     if rank[px] == rank[py]:
+    #         rank[px] += 1
 
 def find(par, x):
     if par[x] == x:
@@ -40,32 +47,30 @@ link = [[-1, -1]]
 for _ in range(m):
     x, y = map(int, sys.stdin.readline().split())
     link.append([x, y])
-    # union(par, x, y)
 
 cut = [int(sys.stdin.readline()) for _ in range(q)]
 
-for i in range(1, m):
-    if i in cut:
-        continue
-    union(par, link[i][0], link[i][1])
-# print(par)
-print(rank)
+for i in range(1, m+1):
+    if i not in cut:
+        union(par, link[i][0], link[i][1])
 
 ans = 0
-for c in cut[::-1]:
-    p1 = find(par, link[c][0])
-    p2 = find(par, link[c][1])
+for i in range(q-1, -1, -1):
+    j = cut[i]
+    p1 = find(par, link[j][0])
+    p2 = find(par, link[j][1])
+    print(par[p1], par[p2])
     if p1 != p2:
-        # link[c][0]의 집합의 개수
-        cnt1 = 0
-        cnt2 = 0
+        cnt1, cnt2 = 0, 0
         for p in par:
-            if p == p1:
+            # 시간 초과
+            temp = find(par, p)
+            if temp == p1:
                 cnt1 += 1
-            if p == p2:
+            if temp == p2:
                 cnt2 += 1
         ans += cnt1 * cnt2
-        union(par, link[c][0], link[c][1])
+        union(par, link[j][0], link[j][1])
 
 print(ans)
-print(par)
+# print(par)
