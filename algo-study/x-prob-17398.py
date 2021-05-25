@@ -64,6 +64,7 @@ for i in range(q-1, -1, -1):
         cnt1, cnt2 = 0, 0
         for p in par:
             # 시간 초과
+            # 매번 모든 노드를 조회하면 안 됨
             temp = find(par, p)
             if temp == p1:
                 cnt1 += 1
