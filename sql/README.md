@@ -11,21 +11,25 @@
 
 #### 06 (WITH, CTE)  
 
+#### 07 (변수)  
+
+#### 08 (내장 함수)  
+
 <br>
 
 ## SQL 분류
-### DML (데이터 <u>조작</u> 언어)  
+### DML (데이터 <ins>조작</ins> 언어)  
 대상 : 테이블의 행  
 - DML 을 사용하려면 테이블이 정의되어 있어야 한다 !  
 
 SELECT, INSERT, UPDATE, DELETE, 트랜잭션이 발생하는 SQL  
-### DDL (데이터 <u>정의</u> 언어)  
+### DDL (데이터 <ins>정의</ins> 언어)  
 DB 개체를 생성/삭제/변경  
 CREATE, DROP, ALTER  
 트랜잭션을 발생시키지 않는다
 - rollback, commit 등은 적용시킬 수 없다  
 - 실행 즉시 MySQL 에 적용된다  
-### DCL (데이터 <u>제어</u> 언어)  
+### DCL (데이터 <ins>제어</ins> 언어)  
 권한 부여/뺏기  
 GRANT, REVOKE, DENY
 
@@ -55,8 +59,18 @@ TRUNCATE : 트랜잭션 로그를 기록하지 않는 DELETE
 ## CTE (Common Table Expression)
 복잡한 쿼리문을 단순화시키는 데에 사용  
 뷰와 용도는 비슷함  
-but, <u>CTE와 파생테이블은 구문이 끝나면 소멸됨</u>  
+but, **<ins>CTE와 파생테이블은 구문이 끝나면 소멸됨</ins>**  
 뷰는 계속 존재해서 다른 구문에서도 사용 가능  
 아직 정의되지 않은 CTE를 미리 참조하는 것은 불가능  
 
 <br>
+
+## MySQL Data Type
+### CHAR(n) vs VARCHAR(n), 어떻게 다른가?
+CHAR(100), VARCHAR(100) 을 선언했다고 해보자.  
+'ABC'를 저장한다고 할 때, char 형식에 저장하면 뒤의 97자리는 낭비된다.  
+하지만 varchar 에 저장하면 정확히 3자리만 사용된다.  
+즉, **<ins>VARCHAR 형식이 공간을 효율적으로 사용하여 저장한다.</ins>**  
+
+CHAR 는 왜 존재하는가?  
+INSERT/UPDATE에서 더 좋은 성능을 발휘한다!  
