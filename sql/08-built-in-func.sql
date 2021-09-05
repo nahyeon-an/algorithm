@@ -65,3 +65,112 @@ SELECT UPPER('abcdEFGHI'), LOWER('abcdEFGHI');
 -- RPAD()
 -- 길이만큼 늘린 후 빈 곳을 채움
 SELECT LPAD('Hi', 5, '#'), RPAD('Hi', 5, '**');
+
+-- LTRIM() : 왼쪽 공백 제거 
+-- RTRIM() : 오른쪽 공백 제거
+SELECT LTRIM('     hello'), RTRIM('hello     ');
+
+-- TRIM() : 앞뒤 공백 모두 제거 
+-- TRIM(방향 타겟문자열 FROM 원래문자열)
+SELECT TRIM('      hello    '), TRIM(BOTH 'a' FROM 'aaahello world! aaaaa');
+
+-- REPEAT(str, 횟수) : str을 횟수만큼 반복 
+SELECT REPEAT('count', 3);
+
+-- REPLACE(str, org, new) : str에서 org를 찾아서 new로 변경
+SELECT REPLACE('This is my SQL study notebook.', 'SQL', 'MySQL');
+
+-- REVERSE()
+SELECT REVERSE('MySQL');
+
+-- SPACE()
+SELECT CONCAT('Hello', SPACE(3), 'World!');
+
+-- SUBSTRING(str, start, len) : str의 start 부터 len 길이까지 반환
+SELECT SUBSTRING('Python', 3, 2);
+
+-- SUBSTRING_INDEX(str, 구분자, 횟수) : str에서 구분자가 횟수번째까지 나오면 그 이후는 버림
+SELECT SUBSTRING_INDEX('developers.kakao.com', '.', 2), SUBSTRING_INDEX('developers.kakao.com', '.', -2);
+
+
+-- 수학
+-- ABS()
+SELECT ABS(-100);
+
+-- ACOS(), ASIN(), ATAN(), ATAN2()
+-- SIN(), COS(), TAN()
+
+-- CEILING(), FLOOR(), ROUND() : 올림, 내림, 반올림
+SELECT CEILING(4.7), FLOOR(4.7), ROUND(4.7);
+
+-- CONV(num, org, new) : num을 org 진수에서 new 진수로 변환, 계산
+SELECT CONV('AA', 16, 2), CONV(100, 10, 8);
+
+-- DEGREES(), RADIANS(), PI()
+SELECT DEGREES(PI()), RADIANS(180);
+
+-- EXP(), LN(), LOG(), LOG2(), LOG10()
+
+-- MOD()
+SELECT MOD(157, 10), 157 % 10, 157 MOD 10;
+
+-- POW(), SQRT()
+SELECT POW(2, 3), SQRT(9);
+
+-- RAND() : 0이상 1미만의 실수
+SELECT RAND(), FLOOR(1 + (RAND() * (6-1)));
+
+-- SIGN() : 양수 -> 1, 0 -> 0, 음수 -> -1 반환
+SELECT SIGN(100), SIGN(0), SIGN(-100.123);
+
+-- TRUNCATE(num, idx) : num을 소수점 기준으로 idx까지 구하고 나머지는 버림
+SELECT TRUNCATE(12345.12345, 2), TRUNCATE(12345.12345, -2);
+
+
+-- 날짜, 시간
+-- ADDDATE(), SUBDATE()
+SELECT ADDDATE('2025-01-01', INTERVAL 31 DAY), ADDDATE('2025-01-01', INTERVAL 1 MONTH);
+SELECT SUBDATE('2025-01-01', INTERVAL 31 DAY), SUBDATE('2025-01-01', INTERVAL 1 MONTH);
+
+-- ADDTIME(), SUBTIME()
+SELECT ADDTIME('2025-01-01 23:59:59', '1:1:1'), ADDTIME('15:00:00', '2:10:10');
+SELECT SUBTIME('2025-01-01 23:59:59', '1:1:1'), SUBTIME('15:00:00', '2:10:10');
+
+-- CURDATE(), CURTIME(), NOW(), SYSDATE()
+SELECT CURDATE(), CURTIME(), NOW(), SYSDATE();
+
+-- YEAR(), MONTH(), DAY(), HOUR(), MINUTE(), SECOND(), MICROSECOND()
+SELECT YEAR(CURDATE()), MONTH(CURDATE()), DAYOFMONTH(CURDATE());
+SELECT HOUR(CURTIME()), MINUTE(CURRENT_TIME()), SECOND(CURRENT_TIME), MICROSECOND(CURRENT_TIME);
+
+-- DATE(), TIME()
+SELECT DATE(NOW()), TIME(NOW());
+
+-- DATEDIFF(), TIMEDIFF()
+
+-- DAYOFWEEK(), MONTHNAME(), DAYOFYEAR()
+
+-- LAST_DAY()
+
+-- MAKEDATE()
+
+-- MAKETIME()
+
+-- PERIOD_ADD(), PERIOD_DIFF()
+
+-- QUARTER()
+
+-- TIME_TO_SEC()
+
+
+-- 시스템 함수
+-- USER(), DATABASE()
+SELECT USER(), DATABASE();
+
+-- FOUND_ROWS()
+
+-- ROW_COUNT()
+
+-- VERSION()
+
+-- SLEEP()

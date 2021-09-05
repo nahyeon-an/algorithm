@@ -74,3 +74,32 @@ CHAR(100), VARCHAR(100) 을 선언했다고 해보자.
 
 CHAR 는 왜 존재하는가?  
 INSERT/UPDATE에서 더 좋은 성능을 발휘한다!  
+
+<br>
+
+## max_allowed_packet 변수
+MySQL에서 2개의 값이 존재한다.  
+- 하나는 Client-Side : \[mysql], \[mysqldump], \[client]  
+- 다른 하나는 Server-Side : \[mysqld]  
+
+다음 명령어로 확인한 값은 **Server-Side**의 값이다.  
+```
+SHOW variables LIKE 'max_allowed_packet';
+```
+
+이 값을 변경하려면 my.ini 파일의 client-side, server-side 모두에서 변경해야 한다.  
+하지만 Super 권한이 있다면 다음과 같은 방법으로도 변경할 수 있다!  
+```
+SET GLOBAL max_allowed_packet=1073741824;
+```
+
+<br>
+
+## Pivot 
+하나의 컬럼에 포함된 여러 값들을 컬럼으로 변환하여 테이블을 회전하는 것  
+
+<br>
+
+## JSON
+key, value 가 쌍을 이루어 구성된 데이터 포맷  
+데이터를 교환하기 위한 데이터 포맷  
