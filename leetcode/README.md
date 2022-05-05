@@ -15,3 +15,8 @@
 - 5 Longest Palindromic Substring (M)  
     : 6번만에 힘겹게 성공했다.  
       dp 로 풀면 타임아웃, 팰린드롬은 접히는 중심을 기준으로 알고리즘을 짜면, substring 을 쉽게 구할 수 있다.  
+
+2022-05-05-Thu  
+- 6 ZigZag Conversion  
+- 7 Reverse Integer  
+- 이 문제들은 굳이 다시 볼 필요는 없을 것 같다.  
