@@ -20,3 +20,9 @@
 - 6 ZigZag Conversion  
 - 7 Reverse Integer  
 - 이 문제들은 굳이 다시 볼 필요는 없을 것 같다.  
+
+2022-05-11-Wed  
+- 8 String to Integer (atoi)  
+- 9 Palindrome Number  
+- 8번은 싫어요가 많았던 이유가 있던 만큼 별로인 문제였다.  
+- 9번은 전형적인 dp 문제. 팰린드롬을 푸는 다른 알고리즘이 있나?  
