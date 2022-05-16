@@ -35,3 +35,8 @@
 - 11 Container With Most Water (M)  
 - 12 Integer to Roman (M)  
 - 11번은 처음에 brute force 로 풀어서 시간초과 됐다. 데이터 수를 보니 예상했지만, 좋은 방법이 떠오르지 않았다. 투 포인터로 접근할 수 있다는 힌트를 얻고 그렇게 풀었다.  
+
+2022-05-16-Mon  
+- 13 Roman to Integer (E)  
+- 14 Longest Common Prefix (E)  
+- 둘 다 easy 레벨이었지만, 14 LCP 의 경우 솔루션을 다시 보자.(github.io 에 솔루션 작성 !)  
