@@ -40,3 +40,8 @@
 - 13 Roman to Integer (E)  
 - 14 Longest Common Prefix (E)  
 - 둘 다 easy 레벨이었지만, 14 LCP 의 경우 솔루션을 다시 보자.(github.io 에 솔루션 작성 !)  
+
+2022-05-21-Sat  
+- 15 3sum (M)  
+- 16 3sum closest (M)  
+- 두 문제 모두, 하나의 숫자를 선택한 뒤, 남은 2개의 숫자는 2pointer 알고리즘으로 찾는 방법이었다  
