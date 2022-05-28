@@ -45,3 +45,7 @@
 - 15 3sum (M)  
 - 16 3sum closest (M)  
 - 두 문제 모두, 하나의 숫자를 선택한 뒤, 남은 2개의 숫자는 2pointer 알고리즘으로 찾는 방법이었다  
+
+2022-05-28-Sat
+- 17 letter-combinations-of-a-phone-number (M)  
+- 파이썬의 product 라이브러리를 이용해 쉽게 풀 수 있었다.  
