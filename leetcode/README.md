@@ -49,3 +49,8 @@
 2022-05-28-Sat
 - 17 letter-combinations-of-a-phone-number (M)  
 - 파이썬의 product 라이브러리를 이용해 쉽게 풀 수 있었다.  
+
+2022-05-29-Sun
+- 18 4sum (M)  
+- 19 Remove Nth Node From End of List (M)  
+- 20 Valid Parentheses (E)  
