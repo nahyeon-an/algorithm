@@ -54,3 +54,7 @@
 - 18 4sum (M)  
 - 19 Remove Nth Node From End of List (M)  
 - 20 Valid Parentheses (E)  
+
+2022-05-31-Tue  
+- 21 Merge Two Sorted Lists (E)  
+- 22 Generate Parentheses (M)  
