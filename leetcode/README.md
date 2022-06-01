@@ -58,3 +58,7 @@
 2022-05-31-Tue  
 - 21 Merge Two Sorted Lists (E)  
 - 22 Generate Parentheses (M)  
+
+2022-06-01-Wed  
+- 23 Merge k Sorted Lists (H)  
+- 24 Swap Nodes in Pairs (M)  
