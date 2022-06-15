@@ -66,3 +66,7 @@
 2022-06-05-Sun  
 - 25 Reverse Nodes in k-Group (H)  
 - 26 Remove Duplicates from Sorted Array (E)  
+
+2022-06-15-Wed  
+- 27 Remove Element (E)  
+- 28 Implement strStr (E)  
